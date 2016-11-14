@@ -24,4 +24,7 @@ __author__ = "Shawn Lee"
 __email__ = "shawnl@palantir.com"
 __license__ = "MIT"
 
-from sqlite3worker import Sqlite3Worker
+try:
+    from sqlite3worker import Sqlite3Worker
+except ImportError:
+    from sqlite3worker.sqlite3worker import Sqlite3Worker
